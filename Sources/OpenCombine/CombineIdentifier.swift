@@ -5,28 +5,16 @@
 //  Created by Sergej Jaskiewicz on 10.06.2019.
 //
 
+import CNIOAtomics
+
 public struct CombineIdentifier: Hashable, CustomStringConvertible {
 
-    @usableFromInline
-    internal static var _counter: UInt = 0
+    private static let _counter = catmc_atomic_unsigned_long_long_create(0)
 
-    @usableFromInline
-    internal static var _counterLock = Lock(recursive: false)
+    private let _id: UInt
 
-    @usableFromInline
-    internal let _id: UInt
-
-    @inlinable
     public init() {
-
-        var id: UInt = 0
-
-        CombineIdentifier._counterLock.do {
-            id = CombineIdentifier._counter
-            CombineIdentifier._counter += 1
-        }
-
-        _id = id
+        _id = UInt(catmc_atomic_unsigned_long_long_add(CombineIdentifier._counter, 1))
     }
 
     public init(_ obj: AnyObject) {

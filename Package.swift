@@ -12,7 +12,8 @@ let package = Package(
                  .branch("master"))
     ],
     targets: [
-        .target(name: "OpenCombine"),
+        .target(name: "CNIOAtomics"),
+        .target(name: "OpenCombine", dependencies: ["CNIOAtomics"]),
         .testTarget(name: "OpenCombineTests",
                     dependencies: ["OpenCombine", "GottaGoFast"])
     ]

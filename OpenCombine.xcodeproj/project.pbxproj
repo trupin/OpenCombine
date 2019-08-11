@@ -212,6 +212,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		194BFC392300DB6F00BB944F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		"GottaGoFast::GottaGoFast::Product" /* GottaGoFast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GottaGoFast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* AnyPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyPublisher.swift; sourceTree = "<group>"; };
 		OBJ_100 /* SequenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceTests.swift; sourceTree = "<group>"; };
@@ -554,6 +555,7 @@
 		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
+				194BFC392300DB6F00BB944F /* Info.plist */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_57 /* Tests */,
